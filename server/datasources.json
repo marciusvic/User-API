@@ -1,0 +1,12 @@
+{
+  "db": {
+    "url": "mongodb://localhost:27017/db",
+    "name": "db",
+    "connector": "mongodb"
+  },
+  "mongo": {
+    "url": "mongodb://localhost:27017/User-API",
+    "name": "mongo",
+    "connector": "mongodb"
+  }
+}
