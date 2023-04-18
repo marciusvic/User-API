@@ -18,27 +18,33 @@
     "public": true
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "Books": {
     "dataSource": "mongo",
     "public": true,
     "collection": "books"
+  },
+  "Usuario":{
+    "dataSource": "mongo",
+    "public": true,
+    "collection":"usuario"
   }
+  
 }
