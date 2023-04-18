@@ -8,13 +8,6 @@
       "foreignKey": "created_by"
     }
   },
-  "acls":[
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "DENY"
-    }
-  ]
+  "acls":[]
 }
   
