@@ -1,6 +1,8 @@
 {
   "name": "Usuario",
   "base": "User",
+  "properties": {},
+  "validations": [],
   "relations": {
     "books": {
       "type": "hasMany",
@@ -8,6 +10,19 @@
       "foreignKey": "created_by"
     }
   },
-  "acls":[]
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
 }
-  

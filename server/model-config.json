@@ -41,10 +41,9 @@
     "public": true,
     "collection": "books"
   },
-  "Usuario":{
+  "Usuario": {
     "dataSource": "mongo",
     "public": true,
-    "collection":"usuario"
+    "collection": "usuario"
   }
-  
 }
