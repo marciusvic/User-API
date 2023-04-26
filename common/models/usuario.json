@@ -22,7 +22,52 @@
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "alterarNomeLivro"
     }
+
   ],
-  "methods": {}
+  "methods": {"prototype.alterarNomeLivro": {
+    "accepts": [
+      {
+        "arg": "context",
+        "type": "object",
+        "http": { "source": "context" }
+      },
+      {
+        "arg": "fk",
+        "type": "string",
+        "required": true,
+        "description": "Id do livro"
+      },
+      {
+        "arg": "dados",
+        "type": "object",
+        "http": { "source": "body" }
+      }
+    ],
+    "returns": [
+      {
+        "arg": "title",
+        "type": "string",
+        "description": "Novo título do livro"
+      }
+    ],
+    "description": "Altera o título do livro",
+    "http": {
+      "verb": "patch",
+      "path": "/alterarNomeLivro/:fk"
+    }
+  }}
 }
