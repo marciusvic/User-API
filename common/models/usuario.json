@@ -35,10 +35,17 @@
       "principalId": "$owner",
       "permission": "ALLOW",
       "property": "alterarNomeLivro"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "adicionarLivroPorNome"
     }
-
   ],
-  "methods": {"prototype.alterarNomeLivro": {
+  "methods": {
+    "prototype.alterarNomeLivro": {
     "accepts": [
       {
         "arg": "context",
@@ -69,5 +76,32 @@
       "verb": "patch",
       "path": "/alterarNomeLivro/:fk"
     }
-  }}
+    },
+    "prototype.adicionarLivroPorNome": {
+      "accepts": [
+        {
+          "arg": "context",
+          "type": "object",
+          "http": { "source": "context" }
+        },
+        {
+          "arg": "dados",
+          "type": "object",
+          "http": { "source": "body" }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "title",
+          "type": "string",
+          "description": "Novo livro"
+        }
+      ],
+      "description": "Cria novo livro a partir de um título",
+      "http": {
+        "verb": "post",
+        "path": "/adicionarLivroPorNome"
+      }
+    }
+  }
 }
